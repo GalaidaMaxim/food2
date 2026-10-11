@@ -42,3 +42,19 @@ export const getCategoryById = async (id) => {
   const data = await getCategories();
   return data.find((item) => item.idCategory === id);
 };
+
+export const getMealByCategoty = async (catName) => {
+  try {
+    const response = await axios.get(
+      "https://www.themealdb.com/api/json/v1/1/filter.php",
+      {
+        params: {
+          c: catName,
+        },
+      },
+    );
+    return response.data.meals;
+  } catch (err) {
+    console.log(err.message);
+  }
+};

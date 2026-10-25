@@ -34,7 +34,7 @@ export const Header = () => {
         <nav>
           <NavLink to="/">Головна</NavLink>
           <NavLink to="/category">Категорії</NavLink>
-          <NavLink>Країни</NavLink>
+          <NavLink to="/countryes">Країни</NavLink>
         </nav>
       </HedaerContainer>
     </StyledHedaer>

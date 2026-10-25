@@ -58,3 +58,14 @@ export const getMealByCategoty = async (catName) => {
     console.log(err.message);
   }
 };
+
+export const getCountryes = async () => {
+  try {
+    const data = await axios.get(
+      "https://www.themealdb.com/api/json/v1/1/list.php?a=list",
+    );
+    return data.data.meals;
+  } catch (err) {
+    console.log(err.message);
+  }
+};
